@@ -58,8 +58,8 @@
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <h6 class="mb-0">John Doe</h6>
-                                    <small class="text-body-secondary">Admin</small>
+                                    <h6 class="mb-0">{{ Auth::user()->name }}</h6>
+                                    <small class="text-body-secondary">{{ Auth::user()->email }}</small>
                                 </div>
                             </div>
                         </a>
@@ -68,7 +68,7 @@
                         <div class="dropdown-divider my-1 mx-n2"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="{{ route('profile.edit') }}">
                             <i class="icon-base ti tabler-user icon-md me-3"></i><span>My Profile</span>
                         </a>
                     </li>
@@ -89,11 +89,15 @@
                     <li>
                         <div class="dropdown-divider my-1 mx-n2"></div>
                     </li>
-                    <li>
-                        <a class="dropdown-item" href="javascript:void(0);">
-                            <i class="icon-base ti tabler-power icon-md me-3"></i><span>Log Out</span>
-                        </a>
-                    </li>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <li>
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                <i class=" icon-base ti tabler-power icon-md me-3"></i><span>Log Out</span>
+                            </a>
+                        </li>
+                    </form>
                 </ul>
             </li>
             <!--/ User -->

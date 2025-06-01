@@ -1,7 +1,6 @@
 <!doctype html>
 
-<html lang="en" class="layout-navbar-fixed layout-menu-fixed layout-compact" dir="ltr" data-skin="default"
-    data-assets-path="{{ asset('assets/') }}" data-template="vertical-menu-template-starter" data-bs-theme="light">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />

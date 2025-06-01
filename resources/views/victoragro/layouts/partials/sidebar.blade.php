@@ -17,7 +17,7 @@
                     </svg>
                 </span>
             </span>
-            <span class="app-brand-text demo menu-text fw-bold ms-3">Vuexy</span>
+            <span class="app-brand-text demo menu-text fw-bold ms-3">Victor Agro</span>
         </a>
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
@@ -31,9 +31,9 @@
     <ul class="menu-inner py-1">
         <!-- Page -->
         <li class="menu-item active">
-            <a href="index.html" class="menu-link">
+            <a href="{{ route('dashboard') }}" class="menu-link">
                 <i class="menu-icon icon-base ti tabler-smart-home"></i>
-                <div data-i18n="Page 1">Page 1</div>
+                <div data-i18n="Page 1">Dashboard</div>
             </a>
         </li>
         <li class="menu-item">
