@@ -29,19 +29,32 @@
     <div class="menu-inner-shadow"></div>
 
     <ul class="menu-inner py-1">
-        <!-- Page -->
+        <!-- Dashboard -->
         <li class="menu-item active">
-            <a href="{{ route('dashboard') }}" class="menu-link">
+            <a href="{{ route('admin.dashboard') }}" class="menu-link">
                 <i class="menu-icon icon-base ti tabler-smart-home"></i>
                 <div data-i18n="Page 1">Dashboard</div>
             </a>
         </li>
-        <li class="menu-item">
-            <a href="page-2.html" class="menu-link">
-                <i class="menu-icon icon-base ti tabler-app-window"></i>
-                <div data-i18n="Page 2">Page 2</div>
-            </a>
+
+        <li class="menu-header small">
+            <span class="menu-header-text" data-i18n="Apps & Pages">Modules</span>
         </li>
+
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon icon-base ti tabler-users"></i>
+                <div data-i18n="User Management">User Management</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <div data-i18n="Dashboard">User List</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
     </ul>
 </aside>
 

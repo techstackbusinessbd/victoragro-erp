@@ -23,3 +23,20 @@
 <script src="{{ asset('assets/js/main.js') }}"></script>
 
 <!-- Page JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function confirmToggleStatus(userId, currentStatus) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: `You want to ${currentStatus ? 'deactivate' : 'activate'} this user?`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, confirm',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById(`toggle-status-form-${userId}`).submit();
+            }
+        });
+    }
+</script>
