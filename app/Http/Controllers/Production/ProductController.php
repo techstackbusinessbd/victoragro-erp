@@ -22,7 +22,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $products = Product::with(['category', 'type', 'unit', 'packType']); // with relations
+        return view('victoragro.modules.product.create', compact('products'));
     }
 
     /**
